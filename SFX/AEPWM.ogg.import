@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/AEPWM.ogg-6fde9a78cb42050a12cf8d5069ee12b1.oggstr"
+
+[deps]
+
+source_file="res://SFX/AEPWM.ogg"
+dest_files=[ "res://.import/AEPWM.ogg-6fde9a78cb42050a12cf8d5069ee12b1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

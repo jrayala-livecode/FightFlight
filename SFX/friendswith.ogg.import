@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/friendswith.ogg-8fb28a36c5c8160fa6fbddcfbc956f14.oggstr"
+
+[deps]
+
+source_file="res://SFX/friendswith.ogg"
+dest_files=[ "res://.import/friendswith.ogg-8fb28a36c5c8160fa6fbddcfbc956f14.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,151 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GFX/Fonts/Boxy-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://GUI/GUI.gd" type="Script" id=2]
+[ext_resource path="res://GUI/Game Over.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GUI/Title.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="GUI" type="Control" parent="." groups=[
+"GUI",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GUI"]
+volume_db = 1.0
+
+[node name="LivesContainer" type="MarginContainer" parent="GUI"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -40.0
+margin_right = 82.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="GUI/LivesContainer"]
+margin_right = 82.0
+margin_bottom = 40.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesLabel" type="Label" parent="GUI/LivesContainer/GridContainer"]
+margin_right = 66.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "Lives"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="GUI/LivesContainer/GridContainer"]
+margin_left = 70.0
+margin_right = 82.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "1"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreContainer" type="MarginContainer" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -100.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = 40.0
+grow_horizontal = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer2" type="GridContainer" parent="GUI/ScoreContainer"]
+margin_right = 90.0
+margin_bottom = 30.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="GUI/ScoreContainer/GridContainer2"]
+margin_right = 68.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "Score"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="GUI/ScoreContainer/GridContainer2"]
+margin_left = 72.0
+margin_right = 84.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "1"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="GUI" instance=ExtResource( 4 )]
+
+[node name="Game Over" parent="GUI" instance=ExtResource( 3 )]
+
+[node name="Level" type="MarginContainer" parent="GUI"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer3" type="GridContainer" parent="GUI/Level"]
+margin_right = 82.0
+margin_bottom = 30.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="GUI/Level/GridContainer3"]
+margin_right = 66.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "Level"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="Label" parent="GUI/Level/GridContainer3"]
+margin_left = 70.0
+margin_right = 82.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "1"
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="GUI" to="GUI" method="_on_GUI_gui_input"]

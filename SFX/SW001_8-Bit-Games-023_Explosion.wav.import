@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SW001_8-Bit-Games-023_Explosion.wav-80e5efc7fcdb13c0d78b8271a2d74d34.sample"
+
+[deps]
+
+source_file="res://SFX/SW001_8-Bit-Games-023_Explosion.wav"
+dest_files=[ "res://.import/SW001_8-Bit-Games-023_Explosion.wav-80e5efc7fcdb13c0d78b8271a2d74d34.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
